@@ -3,6 +3,7 @@ ratings = open('new_user_ratings_no_zeroes.csv', 'r')
 new_file = open("new_users.csv", 'w')
 users_arr = []
 line = ratings.readline()
+
 while line:
     user_id = int(''.join([i for i in line.split(';')[0] if i.isdigit()]))
     users_arr.append(user_id)
