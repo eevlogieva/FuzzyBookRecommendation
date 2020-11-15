@@ -13,7 +13,7 @@ i = 0
 while line2:
     i+=1
     if i % 1000 == 0:
-        print i
+        print(i)
     try:
         line2 = users.readline()
         user_id = int(line2.split(';')[0].strip('"'))

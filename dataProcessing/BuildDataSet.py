@@ -2,7 +2,7 @@
 
 import re
 import argparse
-import distance
+#import distance
 import requests
 
 # 0 = Title
@@ -72,25 +72,25 @@ def collect_genres(data):
 def isbn_lookup(ISBN, KEY):
 	url = 'https://isbndb.com/api/books.xml?access_key=' + KEY + '&results=texts&index1=isbn&value1=' + ISBN
 	page = requests.get(url)
-	print page.text
+	print(page.text)
 
 # commandline argument dataset
-parser = argparse.ArgumentParser(add_help=False)
-parser.add_argument("-c", "--corpus", dest = "file")
-args = parser.parse_args()
+# parser = argparse.ArgumentParser(add_help=False)
+# parser.add_argument("-c", "--corpus", dest = "file")
+# args = parser.parse_args()
 
-# open and read file
-f = open(args.file, "r")
+# # open and read file
+# f = open(args.file, "r")
 
-items = split_items(f)
+# items = split_items(f)
 
-data = extract_features(items)
+# data = extract_features(items)
 
-genres = collect_genres(data)
+# genres = collect_genres(data)
 
 # pretty_print(data)
-# print genres
-# print len(genres)
+# print(genres)
+# print(len(genres))
 
 # print(distance.levenshtein("Speculative fiction", "Utopian and dystopian fiction"))
 

@@ -38,7 +38,7 @@ def calculate_genre_memberships():
                 new_line.append((genre_name, round(num_people/normalizer, 2)))
         new_file.write(str(isbn) +';' + str(new_line) + '\n')
         line = t.readline()
-    print datetime.datetime.now() - starttime
+    print(datetime.datetime.now() - starttime)
 
 if __name__ == '__main__':
     calculate_genre_memberships()

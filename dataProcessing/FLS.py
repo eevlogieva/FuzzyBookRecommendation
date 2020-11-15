@@ -39,8 +39,8 @@ def FLS(n):
 		# 	print count
 		# count += 1
 
-		print userID, preference
-		print '\n'
+		print((userID, preference))
+		print('\n')
 
 # call MATLAB Fuzzy Toolbox
 def fuzzyMatlab(rating, member):
@@ -74,12 +74,12 @@ def getUserPrefrence(ratedBooks):
 					genreCounts[genre] = 1
 
 	# normalize for recurring genres
-	for key, value in preferences.iteritems():
+	for key, value in preferences.items():
 		normal = genreCounts[key]
 		preferences[key] = value / normal
 
 	# sort list
-	sortedPreferences = sorted(preferences.items(), key=operator.itemgetter(1), reverse=True)
+	sortedPreferences = sorted(list(preferences.items()), key=operator.itemgetter(1), reverse=True)
 
 	return sortedPreferences
 

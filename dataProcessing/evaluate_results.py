@@ -63,10 +63,10 @@ def evaluate_test_data(start_index, number_of_users):
 		number_of_mismatches += b
 		line = test_data.readline()
 	success_rate = number_of_matches / ((number_of_matches + number_of_mismatches)*1.0)
-	print datetime.datetime.now() - start_time
+	print(datetime.datetime.now() - start_time)
 	return success_rate
 
 if __name__ == '__main__':
 	start_index = int(sys.argv[1])
 	number_of_users = int(sys.argv[2])
-	print evaluate_test_data(start_index, number_of_users)
+	print(evaluate_test_data(start_index, number_of_users))

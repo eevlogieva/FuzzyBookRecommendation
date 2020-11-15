@@ -37,7 +37,7 @@ def addAllGenres(preferences):
 	result = {}
 	for genre in allGenres:
 			result[genre] = 0
-	for key, value in preferences.iteritems():
+	for key, value in preferences.items():
 		result[key] = preferences[key]
 
 	return result
@@ -45,7 +45,7 @@ def addAllGenres(preferences):
 # return vector of votes for all genres
 def returnVector(preferences):
 	userPref = addAllGenres(preferences)
-	userPref = sorted(userPref.items(), key=operator.itemgetter(0))
+	userPref = sorted(list(userPref.items()), key=operator.itemgetter(0))
 	prefVect = np.zeros(len(userPref))
 
 	for i in range(len(userPref)):
@@ -75,7 +75,7 @@ def evaluation(n):
 
 		prefVect = returnVector(preferences)
 		dist = eucledianDist(prefVect, target)
-		print dist
+		print(dist)
 	
 
 evaluation(5)

@@ -1,7 +1,7 @@
 def give_similar_users(user_input):
 	# user_similarities {userID:error}
 	users_similarities = {}
-	print user_input
+	print(user_input)
 	preference = open('../data/training_data.csv','r')
 	line = preference.readline()
 	elems = line.split(';')
@@ -38,9 +38,9 @@ def give_similar_users(user_input):
 	for i in range(10):
 		mini = min(users_similarities, key=users_similarities.get)
 		similar_users.append(mini)
-		#print users_similarities[mini]
+		#print(users_similarities[mini])
 		del users_similarities[mini]
-	#print similar_users
+	#print(similar_users)
 	return similar_users
 
 def recommend(similar_users):
@@ -62,7 +62,7 @@ def recommend(similar_users):
 			return recommended_books
 
 		line = ratings.readline()
-	#print recommended_books
+	#print(recommended_books)
 	return recommended_books
 
 def extract_book_titles(recommended_books):
@@ -86,6 +86,6 @@ def extract_book_titles(recommended_books):
 # prints the userID and the error value of the similaritie between the users
 #user_input = {"'drama'": 1, "'comedy'": 10, "'fiction'": 8}
 #users = give_similar_users(user_input)
-#print extract_book_titles(recommend(users))
-#print users
-#print recommend(users)
+#print(extract_book_titles(recommend(users)))
+#print(users)
+#print(recommend(users))

@@ -41,12 +41,12 @@ def scrape_genres(start_index, number_of_books_at_once):
             new_file.write(newline)
             time.sleep(0.1)
         except Exception:
-            print datetime.datetime.now() - starttime
-            print i
+            print(datetime.datetime.now() - starttime)
+            print(i)
             traceback.print_exc()
             t.close()
             new_file.close()
-    print datetime.datetime.now() - starttime
+    print(datetime.datetime.now() - starttime)
 
 if __name__ == '__main__':
     scrape_genres(int(sys.argv[1]), int(sys.argv[2]))

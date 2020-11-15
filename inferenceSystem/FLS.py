@@ -36,14 +36,14 @@ def FLS(n):
 		# new_file.write(text)
 		# line = user_ratings.readline()
 		# if count % 500 == 0:
-		# 	print count
+		# 	print(count)
 		# count += 1
 		line = user_ratings.readline()
 		new_line = str(userID)+';'+str(preference)+'\n'
 		new_file.write(new_line)
 		count += 1
 		if count % 1000 == 0:
-			print count
+			print(count)
 
 # call MATLAB Fuzzy Toolbox
 def fuzzyMatlab(rating, member):

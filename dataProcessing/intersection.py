@@ -13,7 +13,7 @@ i = 0
 while line2:
     i+=1
     if i % 1000 == 0:
-        print i
+        print(i)
     try:
         line2 = ratings.readline()
         isbn = line2.split(';')[1].strip('"')
