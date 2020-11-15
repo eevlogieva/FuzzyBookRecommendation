@@ -36,7 +36,7 @@ def FLS(n):
 		# new_file.write(text)
 		# line = user_ratings.readline()
 		# if count % 500 == 0:
-		# 	print count
+		# 	print(count)
 		# count += 1
 
 		print((userID, preference))
